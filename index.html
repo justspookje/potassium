@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16161d" />
+    <title>Potassium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="browser-shell">
+      <header class="topbar">
+        <div class="window-controls"><span></span><span></span><span></span></div>
+        <div class="tabs" id="tabs">
+          <button class="tab active" data-page="new" aria-current="page"><span class="tab-mark">K</span><span>New Tab</span><i></i></button>
+          <button class="new-tab" id="newTab" aria-label="Open a new tab">+</button>
+        </div>
+        <div class="toolbar-actions"><button class="icon-button" aria-label="Account">◉</button><button class="icon-button" aria-label="Menu">☰</button></div>
+      </header>
+      <section class="navigation" aria-label="Browser navigation">
+        <div class="nav-buttons"><button id="back" aria-label="Back">←</button><button id="forward" aria-label="Forward">→</button><button id="reload" aria-label="Reload">↻</button></div>
+        <form class="address-bar" id="addressForm">
+          <span class="lock">⌁</span><input id="address" aria-label="Search or enter address" value="potassium://newtab" autocomplete="off" /><button type="submit" aria-label="Go">→</button>
+        </form>
+        <button class="star" id="star" aria-label="Bookmark this page">☆</button>
+      </section>
+
+      <section class="start-page" id="startPage">
+        <div class="ambient one"></div><div class="ambient two"></div>
+        <nav class="page-links"><button id="showHistory">History</button><button id="showBookmarks">Bookmarks</button><button id="showSettings">Settings</button></nav>
+        <div class="hero">
+          <div class="potassium-mark"><span></span><b>K</b></div>
+          <p class="eyebrow">YOUR PERSONAL CORNER OF THE WEB</p>
+          <h1>Make the web<br /><em>yours.</em></h1>
+          <form class="search-box" id="searchForm">
+            <span>⌕</span><input id="search" placeholder="Search with Potassium" autofocus /><kbd>⌘ K</kbd>
+          </form>
+          <p class="subcopy">Private by design. Beautiful by default.</p>
+        </div>
+        <section class="shortcuts" aria-label="Top sites">
+          <button class="shortcut" data-url="https://developer.mozilla.org"><span class="site-icon mdn">M</span><b>MDN</b><small>developer.mozilla.org</small></button>
+          <button class="shortcut" data-url="https://github.com"><span class="site-icon github">◖</span><b>GitHub</b><small>github.com</small></button>
+          <button class="shortcut" data-url="https://www.are.na"><span class="site-icon arena">A</span><b>Are.na</b><small>are.na</small></button>
+          <button class="shortcut" data-url="https://www.nytimes.com"><span class="site-icon times">T</span><b>The New York Times</b><small>nytimes.com</small></button>
+          <button class="shortcut add-shortcut" id="addShortcut"><span class="site-icon">+</span><b>Add shortcut</b><small>Keep it close</small></button>
+        </section>
+        <footer><span><i></i> Firefox engine</span><span>Potassium 1.0</span><span>Made for the open web</span></footer>
+      </section>
+
+      <section class="web-page hidden" id="webPage"><div class="page-placeholder"><div class="potassium-mark small"><b>K</b></div><p id="pageDomain"></p><h2>This page would open in<br />your Potassium tab.</h2><button id="returnHome">Return to new tab</button></div></section>
+      <aside class="panel hidden" id="panel" aria-live="polite"><button class="close-panel" id="closePanel">×</button><p class="eyebrow" id="panelLabel"></p><h2 id="panelTitle"></h2><div id="panelContent"></div></aside>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
